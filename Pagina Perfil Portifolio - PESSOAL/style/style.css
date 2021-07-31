@@ -1,301 +1,176 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'PT Sans', sans-serif;
-    color:#1e1e2a;
-    size: 9000rem;
+    color:#000000;
+    size: 90000rem;
+    background-color:rgb(248, 248, 248);
 }
-
-.social-media{
-    height: 15%;
-    position: absolute;
-    z-index: 2;
-    padding: 60px;
+footer{
+    background-color: black;
+    height: 100px;
     width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    color: white;
+    text-align: center;
+   
 }
-.social-media a{
-    text-decoration: none;
-    color:  #0d0d0e;
-    padding: 1rem 4rem;
-    border: 1px solid #0d0d0e;
-    min-width:4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .5s ease-in-out;
+@keyframes degrade {
+    0%{background-position: 0% 50%;}
+    50%{background-position: 0% 50%}
+    100%{background-position: 0% 50%;}
 }
-a:hover{
-    background-color: white;
-}
-
-.contact{
-    display: flex;
-    position: absolute;
-    width: 10%;
-    right: 0;
-    top: 0;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 3;
-}
-.contact a{
-    z-index: 3;
-}
-.contact img{
-    margin:10px;
-    height:30px;
-    opacity: .6;
-    transition: all .4s ease;
-
-
-}
-.header-content{
+.header-content {
     height: 100vh;
     width: 100%;
-    float: left;
     display: flex;
-    position: absolute;
+    position: center;
     align-items: center;
+    margin-top: 50px;
     justify-content: center;
-    color: rgb(53, 44, 44);
-    font-family: raleway;
-    font-weight: 400;
-    letter-spacing: 1px;
+    color: rgb(8, 8, 8);
+    font-family: 'Anton', sans-serif;
+    font-weight: 400px;
+    letter-spacing: 15px;
     flex-direction: column;
     font-size: 50px;
     z-index: 1;
-    
 }
-.header-content-box{
-    z-index: 2;
-    text-align: center;
-    height: auto;
-    padding-right: 60px;
-    width: auto;
 
-}
 .header-content .firstline{
     z-index: 2;
     font-weight:700;
-    font-family: poppins;
+    font-family: 'Anton', sans-serif;
     font-size: 65px;
+    text-align: center;
+    
 }
+
 .header-content .secondline{
     z-index: 2;
     font-size: 30px;
     padding-top:20px ;
     font-weight:500;
-    color: rgb(255, 255, 255,.8);
+    color: rgba(48, 44, 44, 0.8);
+    text-align: center;
+    letter-spacing: 7px;
 }
 .slash{
     animation-name: animateslash;
     animation-duration: .8s;
     animation-iteration-count: infinite;
     animation-play-state: running;
+    color:#6d1313;
 }
-.checkbox-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.color{
+    color:#6d1313;
 }
-
-.checkbox{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 9999;
-    transition: 400ms ease-in-out 0s;
+@keyframes animateslash{
+    0%{
+        opacity: 1;
+        z-index: 2;
+    }
+    100%{
+        opacity: 0;
+        z-index: 0;
+    }
 }
-.checkbox-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.checkbox{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 9999;
-    transition: 400ms ease-in-out 0s;
-
+@-webkit-keyframes animateslash{
+    0%{
+        opacity: 1;
+        z-index: 2;
+    }
+    100%{
+        opacity: 0;
+        z-index: 0;
+    }
 }
 
-.checkbox .trace{
-    width: 50px;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    border-radius: 4px;
-    transition: 0.5s ease-in-out;
-
-}
-
-.checkbox .trace:nth-child(1){
-    top: 26px;
-    transform: rotate(0);
-}
-.checkbox .trace:nth-child(2){
-    top: 46px;
-    transform: rotate(3);
-}
-.checkbox .trace:nth-child(3){
-    top: 66px;
-    transform: rotate(0);
-}
-
-#toggle {
-    display: none;
-}
-
-
-
-
-.menu{
-    position:absolute;
-    top: 28px;
-    right: 30px;
-    background-color: transparent;
-    height: 4px;
-    width: 10px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 0px 0px #ffffff;
-    z-index: -1;
-    transition: 400ms ease-in-out 0s;
-}
-
-.menu-items {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    opacity: 0;
-    visibility: hidden;
-    transition: 400ms ease-in-out 0s;
-    
-}
-.menu-items ul{
-    list-style-type: none;
-
-}
-
-.menu-items ul li a{
-    margin: 10px 0 ;
-    color:#050505;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 40px;
-}
-
-/*ANIMAÇÃO DO MENU*/
-
-#toggle:checked + .checkbox .trace:nth-child(1){
-     transform: rotate(45deg);
-     top: 47px;
-}
-
-#toggle:checked + .checkbox .text:nth-child(2){
-    transform: translate(-100px);
-    width: 30px;
-    visibility: hidden;
-    opacity: 0;
-}   
-#toggle:checked + .checkbox .trace:nth-child(3){
-    transform: rotate(-45deg);
-    top: 48px;
-}
-
-#toggle:checked + .checkbox{
-    background-color: #c4434300;
-}
-
-#toggle:checked ~ .menu{
-    box-shadow: 0px 0px 0px 100vmax #ffffff;
-    z-index: 1;
-}
-
-#toggle:checked ~ .menu-items{
-    visibility: visible;
-    opacity: 1;
-}
-#services{
-    position: relative;
-}
-
-.services-heading{
-    height: auto;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-family: raleway;
-    color: rgb(112, 47, 47);
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    font-weight: 900;
-}
 .about-header{
-    height: auto;
-    width: 100%;
     text-align: center;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 10px;
+    font-size: 25px;
+}
+
+.texto{
+    display: flex;
+    align-items: center;
+    width: 85vw;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 2px;
+    transition: 300ms all ease-in-out;
+    color: gray;
+}
+.img{
+    width: 50%;
+    height: auto;
+    padding-left: 150px;
+    padding-right: 100px;
+    opacity: 75%;
+    transition: 300ms all ease-in-out;
+
+}
+.img:hover{
+    opacity: 100%;
+}
+.texto:hover{
+    color:#000000;
+}
+.services-heading{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 10px;
+    font-size: 25px;
+    margin-top: 170px;
+    margin-bottom: 170px;
+
+}
+
+.services-heading1{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 10px;
+    font-size: 25px;
+    margin-top: 170px;
+    margin-bottom: 170px;
+}
+.canais{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 10px;
+    font-size: 25px;
+    margin-top: 170px;
+    margin-bottom: 170px; 
+}
+.icons{
+    flex-direction: line;
     align-items: center;
     justify-content: center;
-    font-size: 45px;
-    font-family: raleway;
-    color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 60px;
-    font-weight: 900;
+    display: flex;
+    margin-bottom: 170px;
 }
-#skills{
-    width: 100%;
-    height:auto;
-}
-.skills-header{
-    height: auto;
-    width: 100%;
-    text-align: center;
+.social-media{
+    width:  75px;
+    opacity: .6;
+    margin: 8px;
+    flex-direction: line;
+    transition: all .4s ease;
     align-items: center;
     justify-content: center;
-    font-size: 45px;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    font-weight: 900;
+    display: flex;
+    padding: 25px;
+
 }
-.skills-content{
-    height: auto;
-    width:100%;
-    margin-top: 20px;
-    margin-bottom: 80px;
+.footer p{
+    display: flex;
+    padding: 40px;
+    margin-left: 350px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 7px;
 }
